@@ -21,28 +21,23 @@
     /* Логотип */
     .logo {
         margin-top: 25px;
-        width: 160px;
+        width: 150px;
     }
 
     /* Геккон */
     .gecko {
-        width: 260px;
+        width: 240px;
         margin-top: 10px;
         opacity: 0;
         transform: scale(0.8) translateY(-20px) rotate(-4deg);
-        animation: geckoAppear 0.9s ease-out forwards;
+        animation: geckoAppear 0.9s ease-out forwards,
+                   geckoBreath 3s ease-in-out infinite 1.2s;
     }
 
     @keyframes geckoAppear {
         0% { opacity: 0; transform: scale(0.8) translateY(-20px) rotate(-4deg); }
         60% { opacity: 1; transform: scale(1.05) translateY(0) rotate(0deg); }
         100% { opacity: 1; transform: scale(1) translateY(0) rotate(0deg); }
-    }
-
-    /* Дыхание */
-    .gecko {
-        animation: geckoAppear 0.9s ease-out forwards,
-                   geckoBreath 3s ease-in-out infinite 1.2s;
     }
 
     @keyframes geckoBreath {
@@ -62,11 +57,12 @@
         font-size: 18px;
         margin: 5px 0 20px;
         font-weight: 300;
+        line-height: 1.4;
     }
 
     /* Карточки QR */
     .qr-card {
-        width: 280px;
+        width: 300px;
         background: #fff;
         margin: 20px auto;
         padding: 20px;
